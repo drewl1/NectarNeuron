@@ -24,7 +24,7 @@ class MongoDBCog(commands.Cog):
         if message.author.bot:
             return
         if isinstance(message.channel, discord.TextChannel):
-            if len(message.content) > 25:
+            if len(message.content) > 15:
                 user_id = str(message.author.id)
                 user_data = self.collection.find_one({"user_id": user_id})
                 if user_data:
